@@ -22,6 +22,3 @@ def Fib(k) -> int:
         return k
     else:
         return Fib(k - 1) + Fib(k - 2)
-
-
-task_5()
