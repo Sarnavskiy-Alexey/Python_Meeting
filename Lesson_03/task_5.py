@@ -11,7 +11,8 @@ def task_5():
     print(task_5.__name__)
 
     k = int(input('Введите индекс числа Фибоначчи: '))
-    print('Число Фибоначчи:', Fib(abs(k)) * (1 if k >= 0 else (-1 if (k + 1) % 2 == 1 else 1)))
+    l = [(Fib(abs(i)) * (1 if i >= 0 else (-1 if (i + 1) % 2 == 1 else 1))) for i in range(-k, k + 1)]
+    print('Полученный список чисел Фибоначчи:', l)
 
     print('----------------')
 
@@ -21,3 +22,6 @@ def Fib(k) -> int:
         return k
     else:
         return Fib(k - 1) + Fib(k - 2)
+
+
+task_5()
